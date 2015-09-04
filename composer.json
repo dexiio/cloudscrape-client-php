@@ -1,7 +1,6 @@
 {
     "name": "cloudscrape/cloudscrape-api-client",
     "type": "library",
-    "version":"1.0.0",
     "description": "CloudScrape API Client for PHP 5.3+",
     "keywords": ["cloudscrape","scraping"],
     "homepage": "http://cloudscrape.com",
