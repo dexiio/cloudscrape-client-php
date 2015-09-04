@@ -180,9 +180,6 @@ class CloudScrapeClient {
         $out->content = $outRaw;
 
         if ($out->statusCode < 100 || $out->statusCode > 399) {
-            echo "### CloudScrape Request failed: \n\n";
-            var_dump($out);
-
             throw new CloudScrapeRequestException("CloudScrape request failed: $out->statusCode $out->reason", $url, $out);
         }
 
