@@ -1,5 +1,6 @@
 <?php
 require_once 'CloudScrape.php';
+// OR include the composer autoloader, if installed with composer
 
 //See https://app.cloudscrape.com/#/api
 define('CS_API_KEY','Your Secret API Key'); //See https://app.cloudscrape.com/#/api
