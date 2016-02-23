@@ -64,27 +64,27 @@ class CloudScrapeRuns {
      * - both successful and failed.
      * @param string $runId 
      *  @param array $inputs array of input objects
- +     * @return CloudScrapeExecutionDTO
- +     */
- +    public function executeBulkSync($runId, $inputs) {
- +        return $this->client->requestJson("runs/$runId/execute/bulk/wait",'POST', $inputs);
- +    }
- +
- +    /**
- +     * Starts new execution of run with given inputs
- +     * @param string $runId
- +     * @param object $inputs
- +     * @return CloudScrapeExecutionDTO
- +     */
- +    public function executeBulk($runId, $inputs) {
- +        return $this->client->requestJson("runs/$runId/execute/bulk",'POST', $inputs);
- +    }
- +
- +    /**
- +     * Starts new execution of run with given inputs, and wait for it to finish before returning the result.
- +     * The inputs, execution and result will be automatically deleted from CloudScrape upon completion
- +     * - both successful and failed.
- +     * @param string $runId
+       * @return CloudScrapeExecutionDTO
+       */
+      public function executeBulkSync($runId, $inputs) {
+          return $this->client->requestJson("runs/$runId/execute/bulk/wait",'POST', $inputs);
+      }
+
+      /**
+       * Starts new execution of run with given inputs
+       * @param string $runId
+       * @param object $inputs
+       * @return CloudScrapeExecutionDTO
+       */
+      public function executeBulk($runId, $inputs) {
+          return $this->client->requestJson("runs/$runId/execute/bulk",'POST', $inputs);
+      }
+  
+      /**
+       * Starts new execution of run with given inputs, and wait for it to finish before returning the result.
+       * The inputs, execution and result will be automatically deleted from CloudScrape upon completion
+       * - both successful and failed.
+       * @param string $runId
      * @param object|array $inputs
      * @return CloudScrapeExecutionDTO
      */
