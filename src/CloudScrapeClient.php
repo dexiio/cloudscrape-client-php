@@ -2,7 +2,7 @@
 
 class CloudScrapeClient {
 
-    private $endPoint = 'https://app.cloudscrape.com/api/';
+    private $endPoint = 'https://app.dexi.io/api/';
     private $userAgent = 'CS-PHP-CLIENT/1.0';
     private $apiKey;
     private $accountId;
