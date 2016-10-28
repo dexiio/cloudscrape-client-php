@@ -46,7 +46,7 @@ class CloudScrapeExecutions {
      */
     public function getResultFile($executionId, $fileId) {
         $response = $this->client->request("executions/$executionId/file/$fileId");
-        return new CloudScrapeFileDTO($response->headers['Content-Type'], $response->content);
+        return new CloudScrapeFileDTO($response->headers['content-type'], $response->content);
     }
 
     /**
